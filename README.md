@@ -19,6 +19,7 @@ Prerequisites
 > SQLite (for local database
 
 **API Endpoints**
+
     - `POST /transactions`: Adds a new transaction (income or expense).
 > ![Screenshot 2024-10-22 210517](https://github.com/user-attachments/assets/7bebe54b-6f15-4285-a971-1a92b1012990)
     - `GET /transactions`: Retrieves all transactions.
