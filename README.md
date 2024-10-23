@@ -21,6 +21,7 @@ Prerequisites
 **API Endpoints**
 
     - `POST /transactions`: Adds a new transaction (income or expense).
+    
     fetch('http://localhost:3000/transactions', {
     method: 'POST',
     headers: {
@@ -47,9 +48,43 @@ Prerequisites
 > ![Screenshot 2024-10-22 211237](https://github.com/user-attachments/assets/5aabec9b-7545-4dbb-a239-8339efeec426)
 
     - `PUT /transactions/:id`: Updates a transaction by ID.
+
+    fetch('http://localhost:3000/transactions/1', {
+    method: 'PUT',
+    headers: {
+        'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({
+        "type": "income",
+        "category_id": 1,
+        "amount": 6000,
+        "date": "2024-10-22",
+        "description": "Updated Freelance Payment"
+    })
+    })
+    .then(response => response.json())
+    .then(data => console.log(data))
+    .catch(error => console.error('Error:', error));
+
 >![Screenshot 2024-10-22 211632](https://github.com/user-attachments/assets/67e7e3de-d263-429c-bcfa-6a9c45dced70)
 
     - `DELETE /transactions/:id`: Deletes a transaction by ID.
+
+    fetch('http://localhost:3000/transactions/1', {
+    method: 'DELETE'
+})
+.then(response => response.json())
+.then(data => console.log(data))
+.catch(error => console.error('Error:', error));
+
+GET Request:
+fetch('http://localhost:3000/summary?startDate=2024-10-01&endDate=2024-10-31&category=1', {
+    method: 'GET'
+})
+.then(response => response.json())
+.then(data => console.log(data))
+.catch(error => console.error('Error:', error));
+    
 >![Screenshot 2024-10-22 211836](https://github.com/user-attachments/assets/4f5fec5d-a5da-4dc5-a8d3-2d01cd7cf07d)
 
     - `GET /summary`: Retrieves a summary of transactions, such as total income, total expenses, and balance. Optionally, this can be filtered by date range or category.
