@@ -69,12 +69,12 @@ Prerequisites
 >![Screenshot 2024-10-22 211632](https://github.com/user-attachments/assets/67e7e3de-d263-429c-bcfa-6a9c45dced70)
 
     - `DELETE /transactions/:id`: Deletes a transaction by ID.
-fetch('http://localhost:3000/transactions/1', {
-    method: 'DELETE'
-})
-.then(response => response.json())
-.then(data => console.log(data))
-.catch(error => console.error('Error:', error));
+    fetch('http://localhost:3000/transactions/1', {
+        method: 'DELETE'
+        })
+        .then(response => response.json())
+        .then(data => console.log(data))
+        .catch(error => console.error('Error:', error));
     
 >![Screenshot 2024-10-22 211836](https://github.com/user-attachments/assets/4f5fec5d-a5da-4dc5-a8d3-2d01cd7cf07d)
 
