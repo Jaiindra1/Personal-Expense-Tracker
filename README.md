@@ -69,17 +69,8 @@ Prerequisites
 >![Screenshot 2024-10-22 211632](https://github.com/user-attachments/assets/67e7e3de-d263-429c-bcfa-6a9c45dced70)
 
     - `DELETE /transactions/:id`: Deletes a transaction by ID.
-
-    fetch('http://localhost:3000/transactions/1', {
+fetch('http://localhost:3000/transactions/1', {
     method: 'DELETE'
-})
-.then(response => response.json())
-.then(data => console.log(data))
-.catch(error => console.error('Error:', error));
-
-GET Request:
-fetch('http://localhost:3000/summary?startDate=2024-10-01&endDate=2024-10-31&category=1', {
-    method: 'GET'
 })
 .then(response => response.json())
 .then(data => console.log(data))
