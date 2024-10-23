@@ -79,4 +79,11 @@ Prerequisites
 >![Screenshot 2024-10-22 211836](https://github.com/user-attachments/assets/4f5fec5d-a5da-4dc5-a8d3-2d01cd7cf07d)
 
     - `GET /summary`: Retrieves a summary of transactions, such as total income, total expenses, and balance. Optionally, this can be filtered by date range or category.
+    fetch('http://localhost:3000/summary?startDate=2024-10-01&endDate=2024-10-31&category=1', {
+    method: 'GET'
+        })
+        .then(response => response.json())
+        .then(data => console.log(data))
+        .catch(error => console.error('Error:', error));
+        
 > ![Screenshot 2024-10-22 212106](https://github.com/user-attachments/assets/fc60eeba-f6d0-4f35-8f10-deab7c721b2f)
